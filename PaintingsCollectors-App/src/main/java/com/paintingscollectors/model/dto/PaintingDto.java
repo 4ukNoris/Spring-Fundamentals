@@ -9,7 +9,7 @@ public class PaintingDto {
     private String imageUrl;
     private StyleType style;
     private String username;
-    private long votes;
+    private int votes;
 
     public long getId() {
         return id;
@@ -65,11 +65,11 @@ public class PaintingDto {
         return this;
     }
 
-    public long getVotes() {
+    public int getVotes() {
         return votes;
     }
 
-    public PaintingDto setVotes(long votes) {
+    public PaintingDto setVotes(int votes) {
         this.votes = votes;
         return this;
     }

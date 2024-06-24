@@ -25,6 +25,13 @@ public class HomeController {
         this.paintingService = paintingService;
     }
 
+    @GetMapping("/")
+    public String index() {
+        if (this.userService.isLoggedUser()) {
+            return Constant.REDIRECT_HOME;
+        }
+        return "index";
+    }
 
     @GetMapping("/home")
     public String home(Model model) {
